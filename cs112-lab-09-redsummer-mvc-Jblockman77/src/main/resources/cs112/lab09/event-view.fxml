@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs112.lab09.controllers.EventController">
+   <left>
+      <ImageView fx:id="historicalEvent" fitHeight="312.0" fitWidth="289.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+   </left>
+   <bottom>
+      <Button fx:id="closeButton" alignment="TOP_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#onCloseButtonClicked" text="Close" BorderPane.alignment="CENTER" />
+   </bottom>
+   <right>
+      <BorderPane prefHeight="527.0" prefWidth="294.0" BorderPane.alignment="CENTER">
+         <top>
+            <VBox alignment="TOP_CENTER" prefHeight="79.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="locationLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="34.0" prefWidth="136.0" text="Location Label" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label fx:id="dateLabel" alignment="CENTER" prefHeight="17.0" prefWidth="95.0" text="Date Label" textAlignment="CENTER" />
+               </children></VBox>
+         </top>
+         <center>
+            <VBox alignment="TOP_CENTER" prefHeight="425.0" prefWidth="216.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="description" alignment="TOP_CENTER" prefHeight="187.0" prefWidth="222.0" text="Decription" textAlignment="CENTER" wrapText="true" />
+                  <Label fx:id="revisedDescription" alignment="TOP_CENTER" prefHeight="244.0" prefWidth="200.0" text="revisedDescription" textAlignment="CENTER" wrapText="true" />
+               </children></VBox>
+         </center>
+         <bottom>
+            <Label BorderPane.alignment="CENTER">
+               <graphic>
+                  <Hyperlink fx:id="citation" onAction="#hyperLinkClicked" text="Citation" />
+               </graphic>
+            </Label>
+         </bottom>
+      </BorderPane>
+   </right>
+</BorderPane>
